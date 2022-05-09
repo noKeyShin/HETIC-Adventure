@@ -1,0 +1,32 @@
+
+.cell {
+    height: 50px;
+    width: 50px;
+}
+
+.blackcell {
+    border: black solid 1px;
+}
+
+.whitecell {
+    border: black solid 1px;
+}
+
+table 
+{
+table-layout: fixed;
+}
+
+
+
+
+
+
+
+  /*.personnage{
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background-color: red;
+      position: relative;
+  }*/
