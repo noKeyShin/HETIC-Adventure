@@ -1,18 +1,19 @@
-
+// Create a center tag to center all the elements
+var center = document.createElement('center');
  
 // Create a table element
-var ChessTable = document.createElement('table');
-for (var i = 8; i > 0; i--) {
+var grille = document.createElement('table');
+for (var i = 57; i > 0; i--) {
 
     // Create a row
     var tr = document.createElement('tr');
-    for (var j = 0; j < 8; j++) {
+    for (var j = 0; j < 84; j++) {
         var ch = j+65
 
         // Create a cell
         var td = document.createElement('td');
 
-
+        //td.innerHTML = String.fromCharCode(ch)+(i)
 
         // If the sum of cell coordinates is even
         // then color the cell white
@@ -37,10 +38,14 @@ for (var i = 8; i > 0; i--) {
     }
 
     // Append the row
-    ChessTable.appendChild(tr);
+    grille.appendChild(tr);
 }
-
+center.appendChild(grille);
 
 // Modifying table attribute properties
-ChessTable.setAttribute('cellspacing', '0');
-ChessTable.setAttribute('width', '270px');
+grille.setAttribute('cellspacing', '0');
+grille.setAttribute('width', '270px');
+document.body.appendChild(center);
+
+
+

@@ -15,9 +15,9 @@
 	  position.y -= distance;
 	// Update y-axis position at the edge.
 	  if (position.y < 0) {
-	    position.y = 950;
-	  } else if (position.y > 950) {
-	    position.y = 0;
+	    position.y = 20;
+	  } else if (position.y > 2850) {
+	    position.y = 2820;
 	  }
 	}
 
@@ -26,9 +26,9 @@
 	  position.x += distance;
 	  // Update x-axis position at the edge.
 	  if (position.x < 0) {
-	    position.x = 1900;
-	  } else if (position.x > 1900) {
-	    position.x = 0;
+	    position.x = 20;
+	  } else if (position.x > 4180) {
+	    position.x = 4170;
 	  }
 	}
 
@@ -60,3 +60,7 @@
 	  refreshPosition();
 	  event.preventDefault();
 	}, true);
+
+
+
+

@@ -1,32 +1,19 @@
-
 .cell {
     height: 50px;
     width: 50px;
+    text-align: center;
+    vertical-align: middle;
 }
 
-.blackcell {
-    border: black solid 1px;
-}
-
-.whitecell {
-    border: black solid 1px;
-}
 
 table 
 {
 table-layout: fixed;
+position: absolute;
+top: 0px;
+left: 0px;
 }
 
-
-
-
-
-
-
-  /*.personnage{
-      height: 40px;
-      width: 40px;
-      border-radius: 50%;
-      background-color: red;
-      position: relative;
-  }*/
+tr, td{
+    border: solid 1px;
+}

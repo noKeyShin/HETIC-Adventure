@@ -10,9 +10,24 @@
 </head>
 <body>
  <!--   <div class = "object1" id="object1"> </div> -->
-  <svg width="1900px" height="950px" class="area">
-    <rect id="object1" x="10" y="10" width="40" height="40" fill="black" />
+  <svg width="4200px" height="2850px" class="area">
+    <rect id="object1" x="5" y="5" width="40" height="40" fill="black" />
   </svg>
+
+  <table>
+   <tr>
+       <td></td>
+       <td></td>
+       <td></td>
+   </tr>
+   <tr>
+       <td></td>
+       <td></td>
+       <td></td>
+   </tr>
+</table>
+
+
 </body>
 <script src="script.js"></script>
 <script src="app.js"></script>
