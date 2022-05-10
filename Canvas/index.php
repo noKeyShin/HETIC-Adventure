@@ -38,6 +38,16 @@ var mcou6_8;
 var mcou6_9;
 var mcou6_10;
 var mcou6_11;
+var mcaf3_1;
+var mcaf3_2;
+var mcaf3_3;
+var mcaf3_4;
+var mcaf3_5;
+var mcaf3_6;
+var mcaf3_7;
+var msalle2_2_1;
+var msalle2_2_2;
+var msalle2_2_3;
 
 
 function startGame() {
@@ -68,6 +78,16 @@ function startGame() {
     mcou6_9 = new component(265, 15, "green", 3515, 1200);
     mcou6_10 = new component(15,250 , "green", 3765, 1215);
     mcou6_11 = new component(615,15 , "green", 3165, 1465);
+    mcaf3_1 = new component(15, 250, "green", 1950, 965);
+    mcaf3_2 = new component(150, 15, "green", 1815, 965);
+    mcaf3_3 = new component(15, 700, "green", 1800, 280);
+    mcaf3_4 = new component(550, 15, "green", 1800, 280);
+    mcaf3_5 = new component(15, 700, "green", 2350, 280);
+    mcaf3_6 = new component(150, 15, "green", 2215, 965);
+    mcaf3_7 = new component(15, 250, "green", 2215, 965);
+    msalle2_2_1 = new component(700, 15, "green", 3520, 150);
+    msalle2_2_2 = new component(15, 550, "green", 4215, 150);
+    msalle2_2_3 = new component(715, 15, "green", 3515, 700);
   
 
 
@@ -134,6 +154,16 @@ function updateGameArea() {
     mcou6_9.update();
     mcou6_10.update();
     mcou6_11.update();
+    mcaf3_1.update();
+    mcaf3_2.update();
+    mcaf3_3.update();
+    mcaf3_4.update();
+    mcaf3_5.update();
+    mcaf3_6.update();
+    mcaf3_7.update();
+    msalle2_2_1.update();
+    msalle2_2_2.update();
+    msalle2_2_3.update();
 
     myGamePiece.newPos();    
     myGamePiece.update();
