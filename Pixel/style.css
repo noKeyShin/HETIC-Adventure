@@ -1,0 +1,93 @@
+.cell {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table 
+{
+table-layout: fixed;
+position: absolute;
+top: 0px;
+left: 0px;
+}
+
+tr, td{
+    border: solid 1px;
+}
+
+
+
+#object1{
+    z-index: 1000;
+}
+
+.cours{
+    position: absolute;
+    top: 1450px; left: 2400px;
+}
+
+.cafet1{
+    position: absolute;
+    top: 2100px; left: 0px;
+}
+.couloir1{
+    position: absolute;
+    top: 2250px; left: 700px;
+}
+
+.couloir2{
+    position: absolute;
+    top: 1800px; left: 1200px;
+}
+
+.couloir3{
+    position: absolute;
+    top: 1550px; left: 1200px;
+}
+
+.couloir4{
+    position: absolute;
+    top: 700px; left: 1200px;
+}
+
+.cafet2{
+    position: absolute;
+    top: 0px; left: 900px;
+}
+
+.salle1{
+    position: absolute;
+    top: 1800px; left: 1450px;
+}
+
+.foyer{
+    position: absolute;
+    top: 1600px; left: 3150px;
+}
+
+.couloir5{
+    position: absolute;
+    top: 1200px; left: 1850px;
+}
+
+.couloir6{
+    position: absolute;
+    top: 950px; left: 1950px;
+}
+
+.cafet3{
+    position: absolute;
+    top: 250px; left: 1800px;
+}
+
+.couloir7{
+    position: absolute;
+    top: 0px; left: 3250px;
+}
+
+.salle2{
+    position: absolute;
+    top: 150px; left: 3500px;
+}
