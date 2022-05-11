@@ -23,7 +23,13 @@ var mca1_1, mca1_2, mca1_3, mca1_4, mca1_5,
     mcaf3_1, mcaf3_2, mcaf3_3, mcaf3_4, mcaf3_5, mcaf3_6, mcaf3_7,
     msalle2_2_1, msalle2_2_2, msalle2_2_3,
     mfoyer1, mfoyer2, mfoyer3,
-    ma106_1, ma106_2, ma106_3, ma106_4, ma106_5, ma106_6;
+    ma106_1, ma106_2, ma106_3, ma106_4, ma106_5, ma106_6,
+    tdt, murfoyerinterieur, bbf,
+    bureaua106, tablea106_1, tablea106_2, tablea106_3, tablea106_4, tablea106_5, tablea106_6,
+    mocafet1_1, mocafet1_2, tablecafet1_1, tablecafet1_2,tablecafet1_3, tablecafet1_4,
+    tablecafet2_1, tablecafet2_2, tablecafet2_3, tablecafet2_4, mocafet2,
+    mocaf3_1, mocaf3_2, tablecafet3_1, tablecafet3_2, tablecafet3_3, tablecafet3_4,
+    tablesalle_1, tablesalle_2, tablesalle_3, tablesalle_4, tablesalle_5, tablesalle_6, bureausalle;
 
 function startGame() {
     myGamePiece = new component(40, 40, "red", 3000, 2400);
@@ -50,7 +56,7 @@ function startGame() {
     mcour5 = new component(15, 100, "green", 2400, 1465);
     mcou6_1 = new component(850, 15, "green", 1850, 1465);
     mcou6_2 = new component(15, 250, "green", 1850, 1215);
-    mcou6_3 = new component(100, 15, "green", 1850, 1200);
+    mcou6_3 = new component(115, 15, "green", 1850, 1200);
     mcou6_4 = new component(1050, 15, "green", 2215, 1200);
     mcou6_5 = new component(15, 1200, "green", 3250, 15);
     mcou6_6 = new component(280, 15, "green", 3250, 0);
@@ -59,13 +65,13 @@ function startGame() {
     mcou6_9 = new component(265, 15, "green", 3515, 1200);
     mcou6_10 = new component(15,250 , "green", 3765, 1215);
     mcou6_11 = new component(915,15 , "green", 2865, 1465);
-    mcaf3_1 = new component(15, 250, "green", 1950, 965);
-    mcaf3_2 = new component(150, 15, "green", 1815, 965);
-    mcaf3_3 = new component(15, 700, "green", 1800, 280);
-    mcaf3_4 = new component(550, 15, "green", 1800, 280);
-    mcaf3_5 = new component(15, 700, "green", 2350, 280);
-    mcaf3_6 = new component(150, 15, "green", 2215, 965);
-    mcaf3_7 = new component(15, 250, "green", 2215, 965);
+    mcaf3_1 = new component(15, 250, "green", 1950, 950);
+    mcaf3_2 = new component(150, 15, "green", 1815, 935);
+    mcaf3_3 = new component(15, 700, "green", 1800, 250);
+    mcaf3_4 = new component(550, 15, "green", 1815, 250);
+    mcaf3_5 = new component(15, 700, "green", 2365, 250);
+    mcaf3_6 = new component(150, 15, "green", 2215, 935);
+    mcaf3_7 = new component(15, 265, "green", 2215, 950);
     msalle2_2_1 = new component(700, 15, "green", 3520, 150);
     msalle2_2_2 = new component(15, 550, "green", 4215, 150);
     msalle2_2_3 = new component(715, 15, "green", 3515, 700);
@@ -78,7 +84,42 @@ function startGame() {
     ma106_4= new component(15, 700, "green", 2015, 1815);
     ma106_5= new component(565, 15, "green", 1465, 2515);
     ma106_6= new component(15, 215, "green", 1465, 2450);
-
+    tcour1 = new component(150, 50, "blue", 2565, 2130);
+    tcour2 = new component(150, 50, "blue", 2915, 1730);
+    tdt = new component(250, 100, "blue", 3300, 1700);
+    murfoyerinterieur = new component(350, 50, "blue", 3250, 1950);
+    bbf = new component(150, 75, "blue", 3350, 2075);
+    bureaua106 = new component(150, 50, "blue", 1750, 2415);
+    tablea106_1 = new component(150, 50, "blue", 1550, 2315);
+    tablea106_2 = new component(150, 50, "blue", 1815, 2315);
+    tablea106_3 = new component(150, 50, "blue", 1815, 2115);
+    tablea106_4 = new component(150, 50, "blue", 1550, 2115);
+    tablea106_5 = new component(150, 50, "blue", 1550, 1915);
+    tablea106_6 = new component(150, 50, "blue", 1815, 1915);
+    mocafet1_1 = new component(50, 150, "blue", 15, 2315);
+    mocafet1_2 = new component(150, 50, "blue", 265, 2115);
+    tablecafet1_1 = new component(50, 150, "blue", 165, 2465);
+    tablecafet1_2 = new component(50, 150, "blue", 165, 2215);
+    tablecafet1_3 = new component(50, 150, "blue", 465, 2215);
+    tablecafet1_4 = new component(50, 150, "blue", 465, 2465);
+    tablecafet2_1 = new component(150, 50, "blue", 965, 165);
+    tablecafet2_2 = new component(150, 50, "blue", 1265, 165);
+    tablecafet2_3 = new component(150, 50, "blue", 1265, 415);
+    tablecafet2_4 = new component(150, 50, "blue", 965, 415);
+    mocafet2 = new component(150, 50, "yellow", 915, 665);
+    mocaf3_1 = new component(150, 50, "blue", 2015, 265);
+    mocaf3_2 = new component(50, 150, "blue", 1815, 785);
+    tablecafet3_1 = new component(150, 50, "blue", 1865, 415);
+    tablecafet3_2 = new component(150, 50, "blue", 2165, 415);
+    tablecafet3_3 = new component(150, 50, "blue", 2165, 665);
+    tablecafet3_4 = new component(150, 50, "blue", 1865, 665);
+    tablesalle_1 = new component(50, 150, "blue", 3615, 215);
+    tablesalle_2 = new component(50, 150, "blue", 3815, 215);
+    tablesalle_3 = new component(50, 150, "blue", 4015, 215);
+    tablesalle_4 = new component(50, 150, "blue", 4015, 515);
+    tablesalle_5 = new component(50, 150, "blue", 3815, 515);
+    tablesalle_6 = new component(50, 150, "blue", 3615, 515);
+    bureausalle = new component(50, 150, "blue", 4115, 265);
 
     myGameArea.start();
 
@@ -129,7 +170,14 @@ function updateGameArea() {
     mcaf3_1.update(), mcaf3_2.update(), mcaf3_3.update(), mcaf3_4.update(), mcaf3_5.update(), mcaf3_6.update(), mcaf3_7.update(),
     msalle2_2_1.update(), msalle2_2_2.update(), msalle2_2_3.update(),
     mfoyer1.update(), mfoyer2.update(), mfoyer3.update(),
-    ma106_1.update(), ma106_2.update(), ma106_3.update(), ma106_4.update(), ma106_5.update(), ma106_6.update();
+    ma106_1.update(), ma106_2.update(), ma106_3.update(), ma106_4.update(), ma106_5.update(), ma106_6.update(),
+    tcour1.update(), tcour2.update();
+    tdt.update(), murfoyerinterieur.update(), bbf.update();
+    bureaua106.update(), tablea106_1.update(), tablea106_2.update(), tablea106_3.update(), tablea106_4.update(), tablea106_5.update(), tablea106_6.update(),
+    mocafet1_1.update(), mocafet1_2.update(), tablecafet1_1.update(), tablecafet1_2.update(),tablecafet1_3.update(), tablecafet1_4.update(),
+    tablecafet2_1.update(), tablecafet2_2.update(), tablecafet2_3.update(), tablecafet2_4.update(), mocafet2.update(),
+    mocaf3_1.update(), mocaf3_2.update(), tablecafet3_1.update(), tablecafet3_2.update(), tablecafet3_3.update(), tablecafet3_4.update(),
+    tablesalle_1.update(), tablesalle_2.update(), tablesalle_3.update(), tablesalle_4.update(), tablesalle_5.update(), tablesalle_6.update(), bureausalle.update();
     myGamePiece.newPos();   
     myGamePiece.update();
 
@@ -889,6 +937,74 @@ if(myGamePiece.y < mcou3_1.y + mcou3_1.height &&
     else
     {
     myGamePiece.y -= 10;
+    }
+}
+
+
+
+
+
+
+
+
+
+if(myGamePiece.y < tcour1.y + tcour1.height &&
+    myGamePiece.y + myGamePiece.height > tcour1.y &&
+    myGamePiece.width + myGamePiece.x > tcour1.x &&
+    myGamePiece.width + myGamePiece.x < tcour1.x+tcour1.width) {
+    console.log("collision");
+    if (myGamePiece.y > tcour1.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.x < tcour1.x + tcour1.width &&
+    myGamePiece.x + myGamePiece.width > tcour1.x &&
+    myGamePiece.height + myGamePiece.y > tcour1.y &&
+    myGamePiece.height + myGamePiece.y < tcour1.y+tcour1.height) {
+    console.log("collision");
+    if (myGamePiece.x > tcour1.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.y < tcour2.y + tcour2.height &&
+    myGamePiece.y + myGamePiece.height > tcour2.y &&
+    myGamePiece.width + myGamePiece.x > tcour2.x &&
+    myGamePiece.width + myGamePiece.x < tcour2.x+tcour2.width) {
+    console.log("collision");
+    if (myGamePiece.y > tcour2.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.x < tcour2.x + tcour2.width &&
+    myGamePiece.x + myGamePiece.width > tcour2.x &&
+    myGamePiece.height + myGamePiece.y > tcour2.y &&
+    myGamePiece.height + myGamePiece.y < tcour2.y+tcour2.height) {
+    console.log("collision");
+    if (myGamePiece.x > tcour2.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
     }
 }
 
