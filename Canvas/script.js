@@ -1,23 +1,25 @@
-function moveup() {
-    myGamePiece.speedY = -1; 
+/*function moveup() {
+    myGamePiece.speedY = -20; 
 }
 
 function movedown() {
-    myGamePiece.speedY = 1; 
+    myGamePiece.speedY = 20; 
 }
 
 function moveleft() {
-    myGamePiece.speedX = -1; 
+    myGamePiece.speedX = -20; 
 }
 
 function moveright() {
-    myGamePiece.speedX = 1; 
+    myGamePiece.speedX = 20; 
 }
 
 function clearmove() {
     myGamePiece.speedX = 0; 
     myGamePiece.speedY = 0; 
-}
+}*/
+
+
 
 
 

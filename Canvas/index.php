@@ -26,7 +26,7 @@ var mca1_1, mca1_2, mca1_3, mca1_4, mca1_5,
     ma106_1, ma106_2, ma106_3, ma106_4, ma106_5, ma106_6;
 
 function startGame() {
-    myGamePiece = new component(40, 40, "red", 10, 120);
+    myGamePiece = new component(40, 40, "red", 3000, 2400);
 //width height color position-x position-y
     mca1_1 = new component(15, 550, "green", 0, 2115);
     mca1_2 = new component(730, 15, "green", 0, 2665); 
@@ -81,6 +81,9 @@ function startGame() {
 
 
     myGameArea.start();
+
+
+
 }
 
 var myGameArea = {
@@ -129,35 +132,796 @@ function updateGameArea() {
     ma106_1.update(), ma106_2.update(), ma106_3.update(), ma106_4.update(), ma106_5.update(), ma106_6.update();
     myGamePiece.newPos();   
     myGamePiece.update();
+
+
+
+
+if(myGamePiece.x < mcour4.x + mcour4.width &&
+    myGamePiece.x + myGamePiece.width > mcour4.x &&
+    myGamePiece.height + myGamePiece.y > mcour4.y &&
+    myGamePiece.height + myGamePiece.y < mcour4.y + mcour4.height) {
+    console.log("collision");
+    if (myGamePiece.x > mcour4.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+    }
+
+ if(myGamePiece.x < mcour3.x + mcour3.width &&
+    myGamePiece.x + myGamePiece.width > mcour3.x &&
+    myGamePiece.height + myGamePiece.y > mcour3.y &&
+    myGamePiece.height + myGamePiece.y < mcour3.y+mcour3.height) {
+    console.log("collision");
+    if (myGamePiece.x > mcour3.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
 }
 
+if(myGamePiece.x < mcour1.x + mcour1.width &&
+    myGamePiece.x + myGamePiece.width > mcour1.x &&
+    myGamePiece.height + myGamePiece.y > mcour1.y &&
+    myGamePiece.height + myGamePiece.y < mcour1.y+mcour1.height) {
+    console.log("collision");
+    if (myGamePiece.x > mcour1.x)
+    {
+    myGamePiece.x += 10;
+    }
+}
+
+if(myGamePiece.x < mcour5.x + mcour5.width &&
+    myGamePiece.x + myGamePiece.width > mcour5.x &&
+    myGamePiece.height + myGamePiece.y > mcour5.y &&
+    myGamePiece.height + myGamePiece.y < mcour5.y+mcour5.height) {
+    console.log("collision");
+    if (myGamePiece.x > mcour5.x)
+    {
+    myGamePiece.x += 10;
+    }
+}
+
+if(myGamePiece.x < mfoyer2.x + mfoyer2.width &&
+    myGamePiece.x + myGamePiece.width > mfoyer2.x &&
+    myGamePiece.height + myGamePiece.y > mfoyer2.y &&
+    myGamePiece.height + myGamePiece.y < mfoyer2.y+mfoyer2.height) {
+    console.log("collision");
+    if (myGamePiece.x < mfoyer2.x)
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < ma106_4.x + ma106_4.width &&
+    myGamePiece.x + myGamePiece.width > ma106_4.x &&
+    myGamePiece.height + myGamePiece.y > ma106_4.y &&
+    myGamePiece.height + myGamePiece.y < ma106_4.y+ma106_4.height) {
+    console.log("collision");
+    if (myGamePiece.x < ma106_4.x)
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < ma106_3.x + ma106_3.width &&
+    myGamePiece.x + myGamePiece.width > ma106_3.x &&
+    myGamePiece.height + myGamePiece.y > ma106_3.y &&
+    myGamePiece.height + myGamePiece.y < ma106_3.y+ma106_3.height) {
+    console.log("collision");
+    if (myGamePiece.x > ma106_3.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < ma106_6.x + ma106_6.width &&
+    myGamePiece.x + myGamePiece.width > ma106_6.x &&
+    myGamePiece.height + myGamePiece.y > ma106_6.y &&
+    myGamePiece.height + myGamePiece.y < ma106_6.y+ma106_6.height) {
+    console.log("collision");
+    if (myGamePiece.x > ma106_6.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < mcou2_4.x + mcou2_4.width &&
+    myGamePiece.x + myGamePiece.width > mcou2_4.x &&
+    myGamePiece.height + myGamePiece.y > mcou2_4.y &&
+    myGamePiece.height + myGamePiece.y < mcou2_4.y+mcou2_4.height) {
+    console.log("collision");
+    if (myGamePiece.x > mcou2_4.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < mcou2_1.x + mcou2_1.width &&
+    myGamePiece.x + myGamePiece.width > mcou2_1.x &&
+    myGamePiece.height + myGamePiece.y > mcou2_1.y &&
+    myGamePiece.height + myGamePiece.y < mcou2_1.y+mcou2_1.height) {
+    console.log("collision");
+    if (myGamePiece.x > mcou2_1.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < mca1_5.x + mca1_5.width &&
+    myGamePiece.x + myGamePiece.width > mca1_5.x &&
+    myGamePiece.height + myGamePiece.y > mca1_5.y &&
+    myGamePiece.height + myGamePiece.y < mca1_5.y+mcou2_4.height) {
+    console.log("collision");
+    if (myGamePiece.x < mca1_5.x)
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < mca1_4.x + mca1_4.width &&
+    myGamePiece.x + myGamePiece.width > mca1_4.x &&
+    myGamePiece.height + myGamePiece.y > mca1_4.y &&
+    myGamePiece.height + myGamePiece.y < mca1_4.y+mca1_4.height) {
+    console.log("collision");
+    if (myGamePiece.x < mca1_4.x)
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < mca1_1.x + mca1_1.width &&
+    myGamePiece.x + myGamePiece.width > mca1_1.x &&
+    myGamePiece.height + myGamePiece.y > mca1_1.y &&
+    myGamePiece.height + myGamePiece.y < mca1_1.y+mca1_1.height) {
+    console.log("collision");
+    if (myGamePiece.x > mca1_1.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < mcou2_2.x + mcou2_2.width &&
+    myGamePiece.x + myGamePiece.width > mcou2_2.x &&
+    myGamePiece.height + myGamePiece.y > mcou2_2.y &&
+    myGamePiece.height + myGamePiece.y < mcou2_2.y+mcou2_2.height) {
+    console.log("collision");
+    if (myGamePiece.x > mcou2_2.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < mcaf2_2.x + mcaf2_2.width &&
+    myGamePiece.x + myGamePiece.width > mcaf2_2.x &&
+    myGamePiece.height + myGamePiece.y > mcaf2_2.y &&
+    myGamePiece.height + myGamePiece.y < mcaf2_2.y+mcaf2_2.height) {
+    console.log("collision");
+    if (myGamePiece.x > mcaf2_2.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < mcaf3_3.x + mcaf3_3.width &&
+    myGamePiece.x + myGamePiece.width > mcaf3_3.x &&
+    myGamePiece.height + myGamePiece.y > mcaf3_3.y &&
+    myGamePiece.height + myGamePiece.y < mcaf3_3.y+mcaf3_3.height) {
+    console.log("collision");
+    if (myGamePiece.x > mcaf3_3.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < mcaf3_5.x + mcaf3_5.width &&
+    myGamePiece.x + myGamePiece.width > mcaf3_5.x &&
+    myGamePiece.height + myGamePiece.y > mcaf3_5.y &&
+    myGamePiece.height + myGamePiece.y < mcaf3_5.y+mcaf3_5.height) {
+    console.log("collision");
+    if (myGamePiece.x > mcaf3_5.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < mcou6_2.x + mcou6_2.width &&
+    myGamePiece.x + myGamePiece.width > mcou6_2.x &&
+    myGamePiece.height + myGamePiece.y > mcou6_2.y &&
+    myGamePiece.height + myGamePiece.y < mcou6_2.y+mcou6_2.height) {
+    console.log("collision");
+    if (myGamePiece.x > mcou6_2.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < mcaf3_1.x + mcaf3_1.width &&
+    myGamePiece.x + myGamePiece.width > mcaf3_1.x &&
+    myGamePiece.height + myGamePiece.y > mcaf3_1.y &&
+    myGamePiece.height + myGamePiece.y < mcaf3_1.y+mcaf3_1.height) {
+    console.log("collision");
+    if (myGamePiece.x > mcaf3_1.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < mcaf3_7.x + mcaf3_7.width &&
+    myGamePiece.x + myGamePiece.width > mcaf3_7.x &&
+    myGamePiece.height + myGamePiece.y > mcaf3_7.y &&
+    myGamePiece.height + myGamePiece.y < mcaf3_7.y+mcaf3_7.height) {
+    console.log("collision");
+    if (myGamePiece.x > mcaf3_7.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < mcou6_5.x + mcou6_5.width &&
+    myGamePiece.x + myGamePiece.width > mcou6_5.x &&
+    myGamePiece.height + myGamePiece.y > mcou6_5.y &&
+    myGamePiece.height + myGamePiece.y < mcou6_5.y+mcou6_5.height) {
+    console.log("collision");
+    if (myGamePiece.x > mcou6_5.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < mcou6_7.x + mcou6_7.width &&
+    myGamePiece.x + myGamePiece.width > mcou6_7.x &&
+    myGamePiece.height + myGamePiece.y > mcou6_7.y &&
+    myGamePiece.height + myGamePiece.y < mcou6_7.y+mcou6_7.height) {
+    console.log("collision");
+    if (myGamePiece.x > mcou6_7.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < mcou6_8.x + mcou6_8.width &&
+    myGamePiece.x + myGamePiece.width > mcou6_8.x &&
+    myGamePiece.height + myGamePiece.y > mcou6_8.y &&
+    myGamePiece.height + myGamePiece.y < mcou6_8.y+mcou6_8.height) {
+    console.log("collision");
+    if (myGamePiece.x > mcou6_8.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < mcou6_8.x + mcou6_8.width &&
+    myGamePiece.x + myGamePiece.width > mcou6_8.x &&
+    myGamePiece.height + myGamePiece.y > mcou6_8.y &&
+    myGamePiece.height + myGamePiece.y < mcou6_8.y+mcou6_8.height) {
+    console.log("collision");
+    if (myGamePiece.x > mcou6_8.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < mcou6_10.x + mcou6_10.width &&
+    myGamePiece.x + myGamePiece.width > mcou6_10.x &&
+    myGamePiece.height + myGamePiece.y > mcou6_10.y &&
+    myGamePiece.height + myGamePiece.y < mcou6_10.y+mcou6_10.height) {
+    console.log("collision");
+    if (myGamePiece.x > mcou6_10.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < msalle2_2_2.x + msalle2_2_2.width &&
+    myGamePiece.x + myGamePiece.width > msalle2_2_2.x &&
+    myGamePiece.height + myGamePiece.y > msalle2_2_2.y &&
+    myGamePiece.height + myGamePiece.y < msalle2_2_2.y+msalle2_2_2.height) {
+    console.log("collision");
+    if (myGamePiece.x > msalle2_2_2.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.x < msalle2_2_2.x + msalle2_2_2.width &&
+    myGamePiece.x + myGamePiece.width > msalle2_2_2.x &&
+    myGamePiece.height + myGamePiece.y > msalle2_2_2.y &&
+    myGamePiece.height + myGamePiece.y < msalle2_2_2.y+msalle2_2_2.height) {
+    console.log("collision");
+    if (myGamePiece.x > msalle2_2_2.x)
+    {
+    myGamePiece.x += 10;
+    }
+    else
+    {
+    myGamePiece.x -= 10;
+    }
+}
+
+if(myGamePiece.y < mcour2.y + mcour2.height &&
+    myGamePiece.y + myGamePiece.height > mcour2.y &&
+    myGamePiece.width + myGamePiece.x > mcour2.x &&
+    myGamePiece.width + myGamePiece.x < mcour2.x+mcour2.width) {
+    console.log("collision");
+    if (myGamePiece.y > mcour2.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < mfoyer3.y + mfoyer3.height &&
+    myGamePiece.y + myGamePiece.height > mfoyer3.y &&
+    myGamePiece.width + myGamePiece.x > mfoyer3.x &&
+    myGamePiece.width + myGamePiece.x < mfoyer3.x+mfoyer3.width) {
+    console.log("collision");
+    if (myGamePiece.y > mfoyer3.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < mfoyer1.y + mfoyer1.height &&
+    myGamePiece.y + myGamePiece.height > mfoyer1.y &&
+    myGamePiece.width + myGamePiece.x > mfoyer1.x &&
+    myGamePiece.width + myGamePiece.x < mfoyer1.x+mfoyer1.width) {
+    console.log("collision");
+    if (myGamePiece.y > mfoyer1.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < mcou6_11.y + mcou6_11.height &&
+    myGamePiece.y + myGamePiece.height > mcou6_11.y &&
+    myGamePiece.width + myGamePiece.x > mcou6_11.x &&
+    myGamePiece.width + myGamePiece.x < mcou6_11.x+mcou6_11.width) {
+    console.log("collision");
+    if (myGamePiece.y > mcou6_11.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < mcou6_1.y + mcou6_1.height &&
+    myGamePiece.y + myGamePiece.height > mcou6_1.y &&
+    myGamePiece.width + myGamePiece.x > mcou6_1.x &&
+    myGamePiece.width + myGamePiece.x < mcou6_1.x+mcou6_1.width) {
+    console.log("collision");
+    if (myGamePiece.y > mcou6_1.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < mcou6_4.y + mcou6_4.height &&
+    myGamePiece.y + myGamePiece.height > mcou6_4.y &&
+    myGamePiece.width + myGamePiece.x > mcou6_4.x &&
+    myGamePiece.width + myGamePiece.x < mcou6_4.x+mcou6_4.width) {
+    console.log("collision");
+    if (myGamePiece.y > mcou6_4.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < msalle2_2_3.y + msalle2_2_3.height &&
+    myGamePiece.y + myGamePiece.height > msalle2_2_3.y &&
+    myGamePiece.width + myGamePiece.x > msalle2_2_3.x &&
+    myGamePiece.width + myGamePiece.x < msalle2_2_3.x+msalle2_2_3.width) {
+    console.log("collision");
+    if (myGamePiece.y > msalle2_2_3.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < msalle2_2_1.y + msalle2_2_1.height &&
+    myGamePiece.y + myGamePiece.height > msalle2_2_1.y &&
+    myGamePiece.width + myGamePiece.x > msalle2_2_1.x &&
+    myGamePiece.width + myGamePiece.x < msalle2_2_1.x+msalle2_2_1.width) {
+    console.log("collision");
+    if (myGamePiece.y > msalle2_2_1.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < mcou6_9.y + mcou6_9.height &&
+    myGamePiece.y + myGamePiece.height > mcou6_9.y &&
+    myGamePiece.width + myGamePiece.x > mcou6_9.x &&
+    myGamePiece.width + myGamePiece.x < mcou6_9.x+mcou6_9.width) {
+    console.log("collision");
+    if (myGamePiece.y > mcou6_9.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < mcou6_3.y + mcou6_3.height &&
+    myGamePiece.y + myGamePiece.height > mcou6_3.y &&
+    myGamePiece.width + myGamePiece.x > mcou6_3.x &&
+    myGamePiece.width + myGamePiece.x < mcou6_3.x+mcou6_3.width) {
+    console.log("collision");
+    if (myGamePiece.y > mcou6_3.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < mcaf3_6.y + mcaf3_6.height &&
+    myGamePiece.y + myGamePiece.height > mcaf3_6.y &&
+    myGamePiece.width + myGamePiece.x > mcaf3_6.x &&
+    myGamePiece.width + myGamePiece.x < mcaf3_6.x+mcaf3_6.width) {
+    console.log("collision");
+    if (myGamePiece.y > mcaf3_6.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < mcaf3_2.y + mcaf3_2.height &&
+    myGamePiece.y + myGamePiece.height > mcaf3_2.y &&
+    myGamePiece.width + myGamePiece.x > mcaf3_2.x &&
+    myGamePiece.width + myGamePiece.x < mcaf3_2.x+mcaf3_2.width) {
+    console.log("collision");
+    if (myGamePiece.y > mcaf3_2.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < mcaf3_4.y + mcaf3_4.height &&
+    myGamePiece.y + myGamePiece.height > mcaf3_4.y &&
+    myGamePiece.width + myGamePiece.x > mcaf3_4.x &&
+    myGamePiece.width + myGamePiece.x < mcaf3_4.x+mcaf3_4.width) {
+    console.log("collision");
+    if (myGamePiece.y > mcaf3_4.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < mcou6_6.y + mcou6_6.height &&
+    myGamePiece.y + myGamePiece.height > mcou6_6.y &&
+    myGamePiece.width + myGamePiece.x > mcou6_6.x &&
+    myGamePiece.width + myGamePiece.x < mcou6_6.x+mcou6_6.width) {
+    console.log("collision");
+    if (myGamePiece.y > mcou6_6.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < mcaf2_3.y + mcaf2_3.height &&
+    myGamePiece.y + myGamePiece.height > mcaf2_3.y &&
+    myGamePiece.width + myGamePiece.x > mcaf2_3.x &&
+    myGamePiece.width + myGamePiece.x < mcaf2_3.x+mcaf2_3.width) {
+    console.log("collision");
+    if (myGamePiece.y > mcaf2_3.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < mcaf2_1.y + mcaf2_1.height &&
+    myGamePiece.y + myGamePiece.height > mcaf2_1.y &&
+    myGamePiece.width + myGamePiece.x > mcaf2_1.x &&
+    myGamePiece.width + myGamePiece.x < mcaf2_1.x+mcaf2_1.width) {
+    console.log("collision");
+    if (myGamePiece.y > mcaf2_1.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < ma106_1.y + ma106_1.height &&
+    myGamePiece.y + myGamePiece.height > ma106_1.y &&
+    myGamePiece.width + myGamePiece.x > ma106_1.x &&
+    myGamePiece.width + myGamePiece.x < ma106_1.x+ma106_1.width) {
+    console.log("collision");
+    if (myGamePiece.y > ma106_1.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < ma106_2.y + ma106_2.height &&
+    myGamePiece.y + myGamePiece.height > ma106_2.y &&
+    myGamePiece.width + myGamePiece.x > ma106_2.x &&
+    myGamePiece.width + myGamePiece.x < ma106_2.x+ma106_2.width) {
+    console.log("collision");
+    if (myGamePiece.y > ma106_2.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < ma106_5.y + ma106_5.height &&
+    myGamePiece.y + myGamePiece.height > ma106_5.y &&
+    myGamePiece.width + myGamePiece.x > ma106_5.x &&
+    myGamePiece.width + myGamePiece.x < ma106_5.x+ma106_5.width) {
+    console.log("collision");
+    if (myGamePiece.y > ma106_5.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < mcou2_3.y + mcou2_3.height &&
+    myGamePiece.y + myGamePiece.height > mcou2_3.y &&
+    myGamePiece.width + myGamePiece.x > mcou2_3.x &&
+    myGamePiece.width + myGamePiece.x < mcou2_3.x+mcou2_3.width) {
+    console.log("collision");
+    if (myGamePiece.y > mcou2_3.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < mcou1_1.y + mcou1_1.height &&
+    myGamePiece.y + myGamePiece.height > mcou1_1.y &&
+    myGamePiece.width + myGamePiece.x > mcou1_1.x &&
+    myGamePiece.width + myGamePiece.x < mcou1_1.x+mcou1_1.width) {
+    console.log("collision");
+    if (myGamePiece.y > mcou1_1.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < mcou1_2.y + mcou1_2.height &&
+    myGamePiece.y + myGamePiece.height > mcou1_2.y &&
+    myGamePiece.width + myGamePiece.x > mcou1_2.x &&
+    myGamePiece.width + myGamePiece.x < mcou1_2.x+mcou1_2.width) {
+    console.log("collision");
+    if (myGamePiece.y > mcou1_2.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < mca1_3.y + mca1_3.height &&
+    myGamePiece.y + myGamePiece.height > mca1_3.y &&
+    myGamePiece.width + myGamePiece.x > mca1_3.x &&
+    myGamePiece.width + myGamePiece.x < mca1_3.x+mca1_3.width) {
+    console.log("collision");
+    if (myGamePiece.y > mca1_3.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < mca1_2.y + mca1_2.height &&
+    myGamePiece.y + myGamePiece.height > mca1_2.y &&
+    myGamePiece.width + myGamePiece.x > mca1_2.x &&
+    myGamePiece.width + myGamePiece.x < mca1_2.x+mca1_2.width) {
+    console.log("collision");
+    if (myGamePiece.y > mca1_2.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+if(myGamePiece.y < mcou3_1.y + mcou3_1.height &&
+    myGamePiece.y + myGamePiece.height > mcou3_1.y &&
+    myGamePiece.width + myGamePiece.x > mcou3_1.x &&
+    myGamePiece.width + myGamePiece.x < mcou3_1.x+mcou3_1.width) {
+    console.log("collision");
+    if (myGamePiece.y > mcou3_1.y)
+    {
+    myGamePiece.y += 10;
+    }
+    else
+    {
+    myGamePiece.y -= 10;
+    }
+}
+
+
+}
+
+
 function moveup() {
-    myGamePiece.speedY = -1; 
+    myGamePiece.speedY = -10; 
 }
 
 function movedown() {
-    myGamePiece.speedY = 1; 
+    myGamePiece.speedY = 10; 
 }
 
 function moveleft() {
-    myGamePiece.speedX = -1; 
+    myGamePiece.speedX = -10; 
 }
 
 function moveright() {
-    myGamePiece.speedX = 1; 
+    myGamePiece.speedX = 10; 
 }
 
 function clearmove() {
     myGamePiece.speedX = 0; 
     myGamePiece.speedY = 0; 
 }
+
+
+
+
 </script>
-<!--<div style="text-align:center;width:480px;">
-  <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">UP</button><br><br>
-  <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
-  <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button><br><br>
-  <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">DOWN</button>
-</div>-->
+
 </body>
 <script src="script.js"></script>
 </html>
