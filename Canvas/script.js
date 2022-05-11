@@ -1,33 +1,3 @@
-/*function moveup() {
-    myGamePiece.speedY = -20; 
-}
-
-function movedown() {
-    myGamePiece.speedY = 20; 
-}
-
-function moveleft() {
-    myGamePiece.speedX = -20; 
-}
-
-function moveright() {
-    myGamePiece.speedX = 20; 
-}
-
-function clearmove() {
-    myGamePiece.speedX = 0; 
-    myGamePiece.speedY = 0; 
-}*/
-
-
-
-
-
-
-
-
-
-
 const keys = {
     z: {
       pressed: false
