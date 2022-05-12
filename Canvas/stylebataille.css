@@ -1,0 +1,172 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+
+
+
+
+
+
+body{
+    background-image: url(../Photos/background-combat/cour.jpg);
+    max-width: 100%;
+    max-height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+
+
+footer{
+    height: 20%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+}
+
+.footerGauche{
+    width: 30%;
+}
+
+.footerDroite{
+    width: 70%;
+}
+
+.tabasser{
+    margin-left: 5%;
+    margin-top: 4%;
+    font-size:x-large;
+    font-weight: bold;
+}
+
+.buttonOUINON{
+margin-left: 30%;
+    height: 180%;
+    width: 50%;
+}
+
+.tabasserOUI, .tabasserNON{
+    height: 20%;
+    width: 35%;
+}
+
+.nomEnnemi{
+    text-align: right;
+    margin-right: 5%;
+    margin-top: 2%;
+    font-size:x-large;
+    font-weight: bold;
+}
+
+.phraseEnnemi{
+    text-align: right;
+    margin-right: 10%;
+}
+
+.photoJoueur{
+    left: 15%;
+    top: 25%;
+    position: absolute;
+    height: 50%;
+}
+
+.photoEnnemi{
+    left: 78%;
+    top: 0%;
+    position: absolute;
+    height: 30%
+}
+
+.footerON{
+    display: flex;
+    width: 100%;
+}
+
+.vieEnnemiON, .vieJoueurON{
+   display: block;
+}
+
+.footerOFF{
+    display: none;
+}
+
+#footer2{
+width: 100%;
+}
+
+.boutonSecondeAttaque, .boutonAttaqueSpéciale{
+    width: 50%;
+}
+
+
+
+#vieEnnemi{
+    background-color: white;
+    width: 23%;
+    border: black solid 2px;
+    margin-top: 8%;
+    margin-left: 38%;
+    padding: 0.5em;
+    font-weight: bold;
+}
+
+.vieEnnemiPoint{
+    font-weight:normal;
+}
+
+#vieJoueur{
+    background-color: white;
+    width: 23%;
+    border: black solid 2px;
+    margin-top: 25%;
+    margin-left: 65%;
+    padding: 0.5em;
+    position: absolute;
+    font-weight: bold;
+}

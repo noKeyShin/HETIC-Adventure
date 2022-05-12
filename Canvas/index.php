@@ -348,35 +348,42 @@ collisionX(myGamePiece,bureausalle), collisionY(myGamePiece,bureausalle);
 function moveup() {
   myGamePiece.speedY = -10;
    // myGamePiece.speedY = -5;
- window.scroll(myGamePiece.x-window.innerWidth/2,myGamePiece.y-window.innerHeight/2);
- window.scroll({behavior: 'smooth'});
+   window.scroll(myGamePiece.x-window.innerWidth/2,myGamePiece.y-window.innerHeight/2);
+    window.scroll({behavior: 'smooth'});
+
 }
 
 function movedown() {
     myGamePiece.speedY = 10;
    // myGamePiece.speedY = 5;
-window.scroll(myGamePiece.x-window.innerWidth/2,myGamePiece.y-window.innerHeight/2);
-window.scroll({behavior: 'smooth'});
+   window.scroll(myGamePiece.x-window.innerWidth/2,myGamePiece.y-window.innerHeight/2);
+    window.scroll({behavior: 'smooth'});
+
 }
 
 function moveleft() {
     myGamePiece.speedX = -10; 
   //  myGamePiece.speedX = -5;
-window.scroll(myGamePiece.x-window.innerWidth/2,myGamePiece.y-window.innerHeight/2);
-window.scroll({behavior: 'smooth'});
+  window.scroll(myGamePiece.x-window.innerWidth/2,myGamePiece.y-window.innerHeight/2);
+    window.scroll({behavior: 'smooth'});
 }
 
 function moveright() {
     myGamePiece.speedX = 10; 
  //   myGamePiece.speedX = 5;
-window.scroll(myGamePiece.x-window.innerWidth/2,myGamePiece.y-window.innerHeight/2);
-window.scroll({behavior: 'smooth'});
+ window.scroll(myGamePiece.x-window.innerWidth/2,myGamePiece.y-window.innerHeight/2);
+    window.scroll({behavior: 'smooth'});
 }
 
 function clearmove() {
     myGamePiece.speedX = 0; 
     myGamePiece.speedY = 0; 
 }
+
+/*setInterval(() => {
+    window.scroll(myGamePiece.x-window.innerWidth/2,myGamePiece.y-window.innerHeight/2);
+    window.scroll({behavior: 'smooth'});
+}, interval);*/
 
 </script>
 
