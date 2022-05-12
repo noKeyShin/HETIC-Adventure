@@ -51,12 +51,20 @@ table {
 
 
 body{
-   /* background-image: url(../Photos/background-combat/cour.jpg);*/
+    /*background-image: url(../Photos/background-combat/cour.jpg);*/
     max-width: 100%;
     max-height: auto;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+}
+
+.backgroundCombat{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
 }
 
 
@@ -154,6 +162,8 @@ width: 100%;
     margin-left: 38%;
     padding: 0.5em;
     font-weight: bold;
+    position: absolute;
+    top: 2%;
 }
 
 .vieEnnemiPoint{
@@ -169,6 +179,7 @@ width: 100%;
     padding: 0.5em;
     position: absolute;
     font-weight: bold;
+    top: 8%;
 }
 
 .combatOFF{

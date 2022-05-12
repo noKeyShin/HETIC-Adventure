@@ -5,6 +5,7 @@ let footer2 = document.getElementById('footer2');
 let vieEnnemi = document.getElementById('vieEnnemi');
 let vieJoueur = document.getElementById('vieJoueur');
 let boutonSecondeAttaque = document.getElementById('boutonSecondeAttaque');
+let combat =  document.querySelector("#combat");
 
 tabasserOUI.addEventListener(`click`, function ()
 {
@@ -17,12 +18,13 @@ tabasserOUI.addEventListener(`click`, function ()
 {
     vieEnnemi.className = 'vieEnnemiON';
     vieJoueur.className = 'vieJoueurON';
-    
 })
 
 tabasserNON.addEventListener(`click`, function ()
 {
     console.log("fin de l'interaction")
+    combat.className = 'combatOFF';
+    window.scroll(myGamePiece.x-window.innerWidth/2,myGamePiece.y-window.innerHeight/2);
 })
 
 
@@ -36,7 +38,8 @@ boutonSecondeAttaque.addEventListener(`click`, function ()
 
     if (document.getElementById("vieEnnemiUpdate").innerHTML < 0){
         console.log("let's go")
-        document.location.href="index.php"
+        combat.className = 'combatOFF';
+        window.scroll(myGamePiece.x-window.innerWidth/2,myGamePiece.y-window.innerHeight/2);
     }
 
     function greet(){

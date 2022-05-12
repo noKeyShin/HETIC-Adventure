@@ -220,25 +220,28 @@ function updateGameArea() {
     myGamePiece.newPos();   
     myGamePiece.update();
 
+    let combat =  document.querySelector("#combat");
     //addeventlistener click
     if(myGamePiece.y < tarik.y + tarik.height &&
     myGamePiece.y + myGamePiece.height > tarik.y &&
     myGamePiece.width + myGamePiece.x > tarik.x &&
     myGamePiece.width + myGamePiece.x < tarik.x+tarik.width) {
-
-    //tabasserOUI.addEventListener(`click`, function ()
-    //{
-        console.log("tarik")
-    let combat =  document.querySelector("#combat");
+    //console.log("tarik")
+    document.addEventListener("keypress", function(event) {
+        if(event.keyCode === 108){
     combat.className = 'combatON';
-    
+    window.scroll(0,0);}});
     //})
 }
 if(myGamePiece.x < tarik.x + tarik.width &&
     myGamePiece.x + myGamePiece.width > tarik.x &&
     myGamePiece.height + myGamePiece.y > tarik.y &&
     myGamePiece.height + myGamePiece.y < tarik.y+tarik.height) {
-    console.log("collision");
+    //console.log("tarik2");
+    document.addEventListener("keypress", function(event) {
+        if(event.keyCode === 97){
+    combat.className = 'combatON';
+    window.scroll(0,0);}});
 }
 
 collisionX(myGamePiece,mca1_1);
@@ -457,7 +460,8 @@ PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
     <section id="combat" class="combatOFF">
 <main>
 
-
+<!-- fond d'écran -->
+<img src="../Photos/background-combat/cour.jpg" class="backgroundCombat">
 
 <!-- Photo joueur -->
 <img src="LEROY_Etienne.png" class="photoJoueur">
@@ -473,9 +477,10 @@ PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
     echo'<p class= "vieJoueurPoint"><p id = "vieJoueurUpdate">'.$vieJoueurUpdate.'</p>/<p id = "vieJoueurMax">'.$vieJoueur. '</p>PV';
   }
   ?> 
-<svg width="200" height="10">
+<!--<svg width="200" height="10">
   <rect width="200" height="10" style="fill:#26FD62;stroke-width:3;stroke:rgb(0,0,0)" />
-</svg> 
+</svg> -->
+<progress value="<?php $vieJoueurUpdate ?>" max="<?php $vieJoueur ?>"></progress> 
 </div>
 
 
@@ -493,14 +498,14 @@ PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
     echo'<p class= "vieEnnemiPoint"><p id = "vieEnnemiUpdate">'.$vieEnnemiUpdate.'</p>/<p id = "vieEnnemiMax">'.$vieEnnemi. '</p>PV';
    // $vieEnnemiUpdate = $vieEnnemiUpdate - $prenom['seconde_attaque'];
 
-
+   echo '<progress value="'. $vieEnnemiUpdate .'" max="'. $vieEnnemi.'"></progress>';
  //   echo'<p class= "vieEnnemiPoint"><p id = "vieEnnemiUpdate">'.$vieEnnemi.'</p>/'.$vieEnnemi. 'PV</p>';
     }
     ?>  
 <svg width="200" height="10">
   <rect width="200" height="10" style="fill:#26FD62;stroke-width:3;stroke:rgb(0,0,0)" />
 </svg> 
-
+ 
 
 </div>
 
