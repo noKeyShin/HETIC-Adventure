@@ -51,7 +51,7 @@ table {
 
 
 body{
-    background-image: url(../Photos/background-combat/cour.jpg);
+   /* background-image: url(../Photos/background-combat/cour.jpg);*/
     max-width: 100%;
     max-height: auto;
     background-repeat: no-repeat;
@@ -169,4 +169,12 @@ width: 100%;
     padding: 0.5em;
     position: absolute;
     font-weight: bold;
+}
+
+.combatOFF{
+    display:  none;
+}
+
+.combatON{
+    display:  block;
 }
