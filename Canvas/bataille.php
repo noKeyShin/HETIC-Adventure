@@ -40,10 +40,17 @@ PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
 
 </head>
 <body>
+<script> idJoueur = localStorage.id; </script>
 
 <main>
 <!-- Photo joueur -->
-<img src="LEROY_Etienne.png" class="photoJoueur">
+<?php
+          $r = $pdo->query('SELECT Photo FROM personnage WHERE id = idJoueur');
+    while($prenom = $r->fetch(PDO::FETCH_ASSOC))  {
+      echo '<img src="'.$prenom['Photo'].'" class="photoJoueur">';
+  }
+  ?> 
+
 <!-- Barre de vie joueur-->
 <div class= "footerOFF" id="vieJoueur">
 <?php
@@ -56,7 +63,7 @@ PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
     echo'<p class= "vieJoueurPoint"><p id = "vieJoueurUpdate">'.$vieJoueurUpdate.'</p>/<p id = "vieJoueurMax">'.$vieJoueur. '</p>PV';
   }
   ?> 
-<svg width="200" height="10">
+<svg max-width="200" height="10">
   <rect width="200" height="10" style="fill:#26FD62;stroke-width:3;stroke:rgb(0,0,0)" />
 </svg> 
 </div>

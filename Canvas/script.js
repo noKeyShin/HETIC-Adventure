@@ -21,25 +21,34 @@ const keys = {
       case 'z':
         keys.z.pressed = true
         lastKey = 'z'
-        moveup()
+        if(combat.className == 'combatOFF') {
+          moveup()
+        }
         break
       case 'q':
         keys.q.pressed = true
         lastKey = 'q'
+        if(combat.className == 'combatOFF') {
         moveleft()
+        }
         break
   
       case 's':
         keys.s.pressed = true
         lastKey = 's'
+        if(combat.className == 'combatOFF') {
         movedown()
+        }
         break
   
       case 'd':
         keys.d.pressed = true
         lastKey = 'd'
+        if(combat.className == 'combatOFF') {
         moveright()
+        }
         break
+
     }
   })
 
@@ -69,3 +78,4 @@ const keys = {
         break
     }
   })
+

@@ -12,6 +12,8 @@ canvas {
 </head>
 <body onload="startGame()">
 <script>
+        idJoueur = localStorage.id;
+
 function collisionX(myGamePiece,obstacle) {
     if(myGamePiece.x < obstacle.x + obstacle.width &&
     myGamePiece.x + myGamePiece.width > obstacle.x &&
@@ -77,19 +79,19 @@ function startGame() {
     mcou1_1 = new component(500, 15, "green", 715, 2250);
     mcou1_2 = new component(500, 15, "green", 715, 2515); 
     mcou2_1 = new component(15, 1550, "green", 1200, 715); 
-    mcou2_2 = new component(15, 1550, "green", 1450, 15);
+    mcou2_2 = new component(15, 1550, "green", 1465, 15);
     mcou2_3 = new component(280, 15, "green", 1200, 2665); 
     mcou2_4 = new component(15, 150, "green", 1200, 2515); 
     mcaf2_1 = new component(300, 15, "green", 900, 715);
     mcaf2_2 = new component(15, 700, "green", 900, 15);
-    mcaf2_3 = new component(550, 15, "green", 900, 15);
+    mcaf2_3 = new component(580, 15, "green", 900, 0);
     mcou3_1 = new component(950, 15, "green", 1450, 1550);
     mcour1 = new component(15, 650, "green", 2400, 1815);
     mcour2 = new component(780, 15, "green", 2400, 2465);
-    mcour3 = new component(15, 475, "green", 3165, 1990);
-    mcour4 = new component(15, 375, "green", 3165, 1465);
+    mcour3 = new component(15, 500, "green", 3165, 1965);
+    mcour4 = new component(15, 400, "green", 3165, 1465);
     mcour5 = new component(15, 100, "green", 2400, 1465);
-    mcou6_1 = new component(850, 15, "green", 1850, 1465);
+    mcou6_1 = new component(865, 15, "green", 1850, 1465);
     mcou6_2 = new component(15, 250, "green", 1850, 1215);
     mcou6_3 = new component(115, 15, "green", 1850, 1200);
     mcou6_4 = new component(1050, 15, "green", 2215, 1200);
@@ -108,8 +110,8 @@ function startGame() {
     mcaf3_6 = new component(150, 15, "green", 2215, 935);
     mcaf3_7 = new component(15, 265, "green", 2215, 950);
     msalle2_2_1 = new component(700, 15, "green", 3520, 150);
-    msalle2_2_2 = new component(15, 550, "green", 4215, 150);
-    msalle2_2_3 = new component(715, 15, "green", 3515, 700);
+    msalle2_2_2 = new component(15, 565, "green", 4215, 150);
+    msalle2_2_3 = new component(715, 15, "green", 3515, 715);
     mfoyer1 = new component(515, 15, "green", 3165, 1600);
     mfoyer2 = new component(15, 600, "green", 3665, 1615);
     mfoyer3 = new component(515, 15, "green", 3165, 2215);
@@ -229,19 +231,42 @@ function updateGameArea() {
     //console.log("tarik")
     document.addEventListener("keypress", function(event) {
         if(event.keyCode === 108){
-    combat.className = 'combatON';
-    window.scroll(0,0);}});
+            if (document.getElementById("vieEnnemiUpdate").innerHTML > 0){
+                combat.className = 'combatON';
+                window.scroll(0,0);}
+            else{
+                window.alert("Vous avez déjà tabassé cet étudiant")
+                console.log("Vous avez déjà tabassé cet étudiant")
+            }
+    }});
     //})
 }
-if(myGamePiece.x < tarik.x + tarik.width &&
-    myGamePiece.x + myGamePiece.width > tarik.x &&
-    myGamePiece.height + myGamePiece.y > tarik.y &&
-    myGamePiece.height + myGamePiece.y < tarik.y+tarik.height) {
+if(checkcollision(myGamePiece, tarik)) {
     //console.log("tarik2");
     document.addEventListener("keypress", function(event) {
-        if(event.keyCode === 97){
-    combat.className = 'combatON';
-    window.scroll(0,0);}});
+        if(event.keyCode === 108){
+            if (document.getElementById("vieEnnemiUpdate").innerHTML > 0){
+                combat.className = 'combatON';
+                window.scroll(0,0);}
+            else{
+                if(canShowAlert)
+                canShowAlert = false;
+                window.alert("Vous avez déjà tabassé cet étudiant")
+                console.log("Vous avez déjà tabassé cet étudiant")
+            }
+    }});
+}
+
+function checkcollision(myGamePiece, collision){
+    if(myGamePiece.x < collision.x + collision.width &&
+    myGamePiece.x + myGamePiece.width > collision.x &&
+    myGamePiece.height + myGamePiece.y > collision.y &&
+    myGamePiece.height + myGamePiece.y < collision.y+collision.height){
+            return true
+    }
+        else {
+            return false
+        }
 }
 
 collisionX(myGamePiece,mca1_1);
@@ -255,6 +280,8 @@ collisionY(myGamePiece,mcou1_2);
 
 collisionX(myGamePiece,mcou2_1);
 collisionX(myGamePiece,mcou2_2);
+collisionY(myGamePiece,mcou2_3);
+collisionX(myGamePiece,mcou2_4);
 
 collisionY(myGamePiece,mcaf2_1);
 collisionX(myGamePiece,mcaf2_2);
@@ -459,12 +486,17 @@ PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
     <link href="stylebataille.css" rel="stylesheet">
     <section id="combat" class="combatOFF">
 <main>
-
+<script> idJoueur = localStorage.id; </script>
 <!-- fond d'écran -->
 <img src="../Photos/background-combat/cour.jpg" class="backgroundCombat">
 
 <!-- Photo joueur -->
-<img src="LEROY_Etienne.png" class="photoJoueur">
+<?php
+          $r = $pdo->query('SELECT Photo FROM personnage WHERE id = 8');
+    while($prenom = $r->fetch(PDO::FETCH_ASSOC))  {
+      echo '<img src="'.$prenom['Photo'].'" class="photoJoueur">';
+  }
+  ?> 
 <!-- Barre de vie joueur-->
 <div class= "footerOFF" id="vieJoueur">
 <?php
@@ -472,15 +504,14 @@ PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
     while($prenom = $r->fetch(PDO::FETCH_ASSOC))  {
     $vieJoueur = $prenom['vie'];
     $vieJoueurUpdate = $vieJoueur;
+    $vieJoueurRatio = ($vieJoueurUpdate / $vieJoueur) * 100;
     echo $prenom['prenom'].' '. $prenom['nom'];
     
     echo'<p class= "vieJoueurPoint"><p id = "vieJoueurUpdate">'.$vieJoueurUpdate.'</p>/<p id = "vieJoueurMax">'.$vieJoueur. '</p>PV';
-  }
+    echo '<svg width="'.$vieJoueurRatio.'%" height="10"> <rect width="200" height="10" style="fill:#26FD62;stroke-width:3;stroke:rgb(0,0,0)" /></svg>';
+}
   ?> 
-<!--<svg width="200" height="10">
-  <rect width="200" height="10" style="fill:#26FD62;stroke-width:3;stroke:rgb(0,0,0)" />
-</svg> -->
-<progress value="<?php $vieJoueurUpdate ?>" max="<?php $vieJoueur ?>"></progress> 
+
 </div>
 
 
@@ -498,7 +529,6 @@ PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
     echo'<p class= "vieEnnemiPoint"><p id = "vieEnnemiUpdate">'.$vieEnnemiUpdate.'</p>/<p id = "vieEnnemiMax">'.$vieEnnemi. '</p>PV';
    // $vieEnnemiUpdate = $vieEnnemiUpdate - $prenom['seconde_attaque'];
 
-   echo '<progress value="'. $vieEnnemiUpdate .'" max="'. $vieEnnemi.'"></progress>';
  //   echo'<p class= "vieEnnemiPoint"><p id = "vieEnnemiUpdate">'.$vieEnnemi.'</p>/'.$vieEnnemi. 'PV</p>';
     }
     ?>  
