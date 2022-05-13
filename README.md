@@ -1,5 +1,5 @@
 
-#  Nom de Votre Projet
+# Hetic Adventure
 Hetic Adventure est un jeu où le but est de battre les ennemis pendant des combats en un contre un. Il faut trouver dans la map Hetic et vaincre les trois étudiants bagarreurs. Pour ce jeu, on peut incarner 40 personnages différents qui sont les 40 étudiants de la PMD.
 
 ## How to start :
