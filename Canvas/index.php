@@ -5,7 +5,7 @@
 <style>
 canvas {
     border:1px solid #d3d3d3;
-    background-image : url('../cover.jpg');
+    background-image : url('../cover.png');
     top: 1000px;
 }
 </style>
