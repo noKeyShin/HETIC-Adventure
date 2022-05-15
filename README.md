@@ -34,7 +34,7 @@ Pour commencer le jeu, il faut commencer avec la page index.php dans le dossier 
 
 ## Authors
 
-Michel Chen | Surmaire Corentin | Frani Bizi | Etienne Leroy | Bernard Yann Mouandza
+Michel Chen | Surmaire Corentin | Frani Bizi | Etienne Leroy | Bernard Yann Mouandza | Florian Legrand
 
 
 
