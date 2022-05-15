@@ -12,7 +12,7 @@ Droite → D
 Gauche →Q
 Haut → Z
 Bas →S
-interraction → l
+interraction → L
 
 Il faut s’approcher des gens pour interagir et pour pouvoir se battre avec les ennemis (autres individus de la promo PMD)
 
