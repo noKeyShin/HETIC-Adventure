@@ -122,7 +122,7 @@ function startGame() {
     ma106_5= new component(565, 15, "green", 1465, 2515);
     ma106_6= new component(15, 215, "green", 1465, 2450);
     tcour1 = new component(200, 50, "blue", 2565, 2130);
-    tcour2 = new component(150, 50, "blue", 2915, 1730);
+    tcour2 = new component(200, 50, "blue", 2915, 1730);
     tdt = new component(250, 100, "blue", 3300, 1700);
     murfoyerinterieur = new component(350, 50, "blue", 3250, 1950);
     bbf = new component(150, 75, "blue", 3350, 2075);
@@ -158,7 +158,47 @@ function startGame() {
     tablesalle_6 = new component(50, 150, "blue", 3615, 515);
     bureausalle = new component(50, 150, "blue", 4115, 265);
 
-    tarik = new component(40, 40, "brown", 2700, 2210);
+    tarik = new component(40, 40, "brown", 2700, 2180);
+    ousmaneSalamatao = new component (40, 40, "cyan", 3380, 2023);
+    ousmaneMamadou_Diallo = new component (40, 40, "cyan", 3662, 643);
+    florentRichard = new component (40, 40, "cyan", 2266, 705);
+    victoireOndelet = new component (40, 40, "cyan", 2267, 456);
+    anne_louChartier = new component (40, 40, "cyan", 1829, 2156);
+    oumaimaChetouani = new component (40, 40, "cyan", 1829, 2069);
+    etienneLeroy = new component (40, 40, "cyan", 2595, 2068);
+    corentinSumaire = new component (40, 40, "cyan", 2598, 2167);
+    florianLegrand = new component (40, 40, "cyan", 2697, 2054);
+    michelChen = new component (40, 40, "cyan", 1170, 23);
+    franiBizi = new component (40, 40, "cyan", 1275, 2589);
+    yannMouandza = new component (40, 40, "cyan", 2179, 456);
+    lucieArnauld = new component (40, 40, "cyan", 3435, 2145);
+    oceaneDerunes = new component (40, 40, "cyan", 1878, 615);
+    mendrikaJolivet = new component (40, 40, "cyan", 3028, 1534);
+    thomasClavel = new component (40, 40, "cyan", 2952, 1775);
+    laurieFeuillerat = new component (40, 40, "cyan", 519, 2502);
+    maximePispisa = new component (40, 40, "cyan", 3662, 335);
+    charbelBou = new component (40, 40, "cyan", 3435, 2024);
+    thomasGravelines = new component (40, 40, "cyan", 3862, 643);
+    morjaneMedjkoune = new component (40, 40, "cyan", 1911, 2066);
+    savySaint_Prix = new component (40, 40, "cyan", 3045, 1775);
+    camilleMartinez = new component (40, 40, "cyan", 1908, 2156);
+    christelleEbouv = new component (40, 40, "cyan", 4062, 560);
+    thomasDias = new component (40, 40, "cyan", 4067, 634);
+    inshyaLakoubay = new component (40, 40, "cyan", 3865, 569);
+    antoniLebaz = new component (40, 40, "cyan", 3486, 1795);
+    sofiaGonzalez = new component (40, 40, "cyan", 3550, 1428);
+    christineCai = new component (40, 40, "cyan", 3622, 1445);
+    herveRisse = new component (40, 40, "cyan", 3868, 339);
+    britniTitus_Cavier = new component (40, 40, "cyan", 974, 365);
+    malinaChantha = new component (40, 40, "cyan", 1066, 452);
+    sylvieCao = new component (40, 40, "cyan", 975, 452);
+    tarikAguenchich = new component (40, 40, "cyan", 2697 , 2167);
+    chanelViane = new component (40, 40, "cyan", 2176, 363);
+    jeremiVespuce = new component (40, 40, "cyan", 2264, 613);
+    frankBassilekin = new component (40, 40, "cyan", 219, 2585);
+    tachrifaHamada = new component (40, 40, "cyan", 219, 2515);
+    bassiratouYessoufou = new component (40, 40, "cyan", 519, 2582);
+    billy_joeKom_Kamze = new component (40, 40, "cyan", 3662, 559);
 
     myGameArea.start();
     window.scroll(myGamePiece.x-window.innerWidth/2,myGamePiece.y-window.innerHeight/2);
@@ -191,6 +231,7 @@ function component(width, height, color, x, y) {
     this.update = function() {
         ctx = myGameArea.context;
         ctx.fillStyle = color;
+        //ctx.globalAlpha = 0.3; 
         ctx.fillRect(this.x, this.y, this.width, this.height);
     }
     this.newPos = function() {
@@ -219,6 +260,45 @@ function updateGameArea() {
     mocaf3_1.update(), mocaf3_2.update(), tablecafet3_1.update(), tablecafet3_2.update(), tablecafet3_3.update(), tablecafet3_4.update(),
     tablesalle_1.update(), tablesalle_2.update(), tablesalle_3.update(), tablesalle_4.update(), tablesalle_5.update(), tablesalle_6.update(), bureausalle.update();
     tarik.update();
+    ousmaneSalamatao.update();
+    ousmaneMamadou_Diallo.update();
+    florentRichard.update();
+    victoireOndelet.update();
+    anne_louChartier.update();
+    oumaimaChetouani.update();
+    etienneLeroy.update();
+    corentinSumaire.update();
+    florianLegrand.update();
+    michelChen.update();
+    franiBizi.update();
+    yannMouandza.update();
+    lucieArnauld.update();
+    oceaneDerunes.update();
+    mendrikaJolivet.update();
+    thomasClavel.update();
+    laurieFeuillerat.update();
+    maximePispisa.update();
+    charbelBou.update();
+    thomasGravelines.update();
+    morjaneMedjkoune.update();
+    savySaint_Prix.update();
+    camilleMartinez.update();
+    christelleEbouv.update();
+    thomasDias.update();
+    inshyaLakoubay.update();
+    antoniLebaz.update();
+    sofiaGonzalez.update();
+    christineCai.update();
+    herveRisse.update();
+    britniTitus_Cavier.update();
+    malinaChantha.update();
+    sylvieCao.update();
+    chanelViane.update();
+    jeremiVespuce.update();
+    frankBassilekin.update();
+    tachrifaHamada.update();
+    bassiratouYessoufou.update();
+    billy_joeKom_Kamze.update();
     myGamePiece.newPos();   
     myGamePiece.update();
 
@@ -233,13 +313,14 @@ function updateGameArea() {
         if(event.keyCode === 108){
             if (document.getElementById("vieEnnemiUpdate").innerHTML > 0){
                 combat.className = 'combatON';
+                document.cookie = "eleve=34";
+                console.log(document.cookie)
                 window.scroll(0,0);}
             else{
-                window.alert("Vous avez déjà tabassé cet étudiant")
+                //window.alert("Vous avez déjà tabassé cet étudiant")
                 console.log("Vous avez déjà tabassé cet étudiant")
             }
     }});
-    //})
 }
 if(checkcollision(myGamePiece, tarik)) {
     //console.log("tarik2");
@@ -247,15 +328,41 @@ if(checkcollision(myGamePiece, tarik)) {
         if(event.keyCode === 108){
             if (document.getElementById("vieEnnemiUpdate").innerHTML > 0){
                 combat.className = 'combatON';
+                document.cookie = "eleve=34";
+                console.log(document.cookie)
                 window.scroll(0,0);}
             else{
                 if(canShowAlert)
                 canShowAlert = false;
-                window.alert("Vous avez déjà tabassé cet étudiant")
+                //window.alert("Vous avez déjà tabassé cet étudiant")
                 console.log("Vous avez déjà tabassé cet étudiant")
             }
     }});
 }
+
+
+
+
+if(myGamePiece.y == corentinSumaire.y &&
+    myGamePiece.x == corentinSumaire.x) {
+    document.addEventListener("keypress", function(event) {
+        if(event.keyCode === 108){
+            document.cookie = 'eleve=8';
+            console.log(document.cookie)
+    }});
+}
+if(checkcollision(myGamePiece, corentinSumaire)) {
+    document.addEventListener("keypress", function(event) {
+        if(event.keyCode === 108){
+          //  document.cookie = 'eleve=8';
+    }});
+}
+
+
+
+
+
+
 
 function checkcollision(myGamePiece, collision){
     if(myGamePiece.x < collision.x + collision.width &&
@@ -446,7 +553,9 @@ function clearmove() {
 
 <?php
 
-//include('../homepage/index1.php');
+session_start();
+$_SESSION['id'] = 'me';
+
 
     $host = 'localhost';
     $dbname = 'hetic';
@@ -486,13 +595,19 @@ PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
     <link href="stylebataille.css" rel="stylesheet">
     <section id="combat" class="combatOFF">
 <main>
-<script> idJoueur = localStorage.id; </script>
+<script> 
+let idJoueur = localStorage.id; 
+document.cookie = idJoueur;
+document.cookie = 'eleve=0';
+console.log(document.cookie)
+
+</script>
 <!-- fond d'écran -->
 <img src="../Photos/background-combat/cour.jpg" class="backgroundCombat">
 
 <!-- Photo joueur -->
 <?php
-          $r = $pdo->query('SELECT Photo FROM personnage WHERE id = 8');
+          $r = $pdo->query('SELECT Photo FROM personnage WHERE id ='. $_COOKIE["id"]);
     while($prenom = $r->fetch(PDO::FETCH_ASSOC))  {
       echo '<img src="'.$prenom['Photo'].'" class="photoJoueur">';
   }
@@ -500,7 +615,7 @@ PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
 <!-- Barre de vie joueur-->
 <div class= "footerOFF" id="vieJoueur">
 <?php
-          $r = $pdo->query('SELECT prenom, nom, vie, seconde_attaque, attaque FROM personnage WHERE id = 7');
+          $r = $pdo->query('SELECT prenom, nom, vie, seconde_attaque, attaque FROM personnage WHERE id ='. $_COOKIE["id"]);
     while($prenom = $r->fetch(PDO::FETCH_ASSOC))  {
     $vieJoueur = $prenom['vie'];
     $vieJoueurUpdate = $vieJoueur;
@@ -516,11 +631,16 @@ PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
 
 
 <!-- Photo ennemi-->
-<img src="Ousmane.png" class="photoEnnemi">
+<?php
+          $r = $pdo->query('SELECT Photo FROM personnage WHERE id ='. $_COOKIE["eleve"]);
+    while($prenom = $r->fetch(PDO::FETCH_ASSOC))  {
+      echo '<img src="'.$prenom['Photo'].'" class="photoEnnemi">';
+  }
+  ?> 
 <!-- Barre de vie ennemi-->
 <div class= "footerOFF" id="vieEnnemi">
 <?php
-          $r = $pdo->query('SELECT prenom, nom, vie FROM personnage WHERE id = 1');
+          $r = $pdo->query('SELECT prenom, nom, vie FROM personnage WHERE id = '. $_COOKIE["eleve"]);
     while($prenom = $r->fetch(PDO::FETCH_ASSOC))  {
       $vieEnnemi = $prenom['vie'];
       $vieEnnemiUpdate = $vieEnnemi;
@@ -554,7 +674,7 @@ PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
         <p class="nomEnnemi">
             
         <?php
-          $r = $pdo->query('SELECT prenom, nom FROM personnage WHERE id = 1');
+          $r = $pdo->query('SELECT prenom, nom FROM personnage WHERE id = '. $_COOKIE["eleve"]);
     while($prenom = $r->fetch(PDO::FETCH_ASSOC))  {
     echo $prenom['prenom'].' '. $prenom['nom'];
     }
@@ -564,7 +684,7 @@ PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
         </p><br>
         <p class="phraseEnnemi">
         <?php
-          $r = $pdo->query('SELECT discussion FROM personnage WHERE id = 1');
+          $r = $pdo->query('SELECT discussion FROM personnage WHERE id = '. $_COOKIE["eleve"]);
     while($prenom = $r->fetch(PDO::FETCH_ASSOC))  {
     echo $prenom['discussion'];
     }
@@ -575,7 +695,7 @@ PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
 
     <div class= "footerOFF" id="footer2">
 <?php
-          $r = $pdo->query('SELECT seconde_attaque, attaque_special, attaque FROM personnage WHERE id = 7');
+          $r = $pdo->query('SELECT seconde_attaque, attaque_special, attaque FROM personnage WHERE id = '. $_COOKIE["id"]);
     while($attaque = $r->fetch(PDO::FETCH_ASSOC))  {
     ?>
     <button  type="button" class = "boutonSecondeAttaque" id = "boutonSecondeAttaque"> <?php echo $attaque['seconde_attaque'].'<br><p id ="attaqueJoueur">'.$attaque['attaque']?></p></button>
