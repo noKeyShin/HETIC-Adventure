@@ -231,7 +231,7 @@ function component(width, height, color, x, y) {
     this.update = function() {
         ctx = myGameArea.context;
         ctx.fillStyle = color;
-        //ctx.globalAlpha = 0.3; 
+        ctx.globalAlpha = 0; 
         ctx.fillRect(this.x, this.y, this.width, this.height);
     }
     this.newPos = function() {
