@@ -231,7 +231,13 @@ function component(width, height, color, x, y) {
     this.update = function() {
         ctx = myGameArea.context;
         ctx.fillStyle = color;
-        ctx.globalAlpha = 0; 
+        if (color=="red"){
+            ctx.globalAlpha = 1;
+        }
+        else{
+            ctx.globalAlpha = 0;
+        }
+         
         ctx.fillRect(this.x, this.y, this.width, this.height);
     }
     this.newPos = function() {
@@ -343,18 +349,39 @@ if(checkcollision(myGamePiece, tarik)) {
 
 
 
-if(myGamePiece.y == corentinSumaire.y &&
-    myGamePiece.x == corentinSumaire.x) {
+if(myGamePiece.y < etienneLeroy.y + etienneLeroy.height &&
+    myGamePiece.y + myGamePiece.height > etienneLeroy.y &&
+    myGamePiece.width + myGamePiece.x > etienneLeroy.x &&
+    myGamePiece.width + myGamePiece.x < etienneLeroy.x+etienneLeroy.width) {
     document.addEventListener("keypress", function(event) {
         if(event.keyCode === 108){
-            document.cookie = 'eleve=8';
-            console.log(document.cookie)
+            if (document.getElementById("vieEnnemiUpdate").innerHTML > 0){
+                combat.className = 'combatON';
+                document.cookie = "eleve=7";
+                console.log(document.cookie)
+                window.scroll(0,0);}
+            else{
+                //window.alert("Vous avez déjà tabassé cet étudiant")
+                console.log("Vous avez déjà tabassé cet étudiant")
+            }
     }});
 }
-if(checkcollision(myGamePiece, corentinSumaire)) {
+
+if(checkcollision(myGamePiece, etienneLeroy)) {
+    //console.log("tarik2");
     document.addEventListener("keypress", function(event) {
         if(event.keyCode === 108){
-          //  document.cookie = 'eleve=8';
+            if (document.getElementById("vieEnnemiUpdate").innerHTML > 0){
+                combat.className = 'combatON';
+                document.cookie = "eleve=7";
+                console.log(document.cookie)
+                window.scroll(0,0);}
+            else{
+                if(canShowAlert)
+                canShowAlert = false;
+                //window.alert("Vous avez déjà tabassé cet étudiant")
+                console.log("Vous avez déjà tabassé cet étudiant")
+            }
     }});
 }
 
@@ -632,7 +659,7 @@ console.log(document.cookie)
 
 <!-- Photo ennemi-->
 <?php
-          $r = $pdo->query('SELECT Photo FROM personnage WHERE id ='. $_COOKIE["eleve"]);
+          $r = $pdo->query('SELECT Photo FROM personnage WHERE id ='. $_COOKIE["id"]);
     while($prenom = $r->fetch(PDO::FETCH_ASSOC))  {
       echo '<img src="'.$prenom['Photo'].'" class="photoEnnemi">';
   }
@@ -640,7 +667,7 @@ console.log(document.cookie)
 <!-- Barre de vie ennemi-->
 <div class= "footerOFF" id="vieEnnemi">
 <?php
-          $r = $pdo->query('SELECT prenom, nom, vie FROM personnage WHERE id = '. $_COOKIE["eleve"]);
+          $r = $pdo->query('SELECT prenom, nom, vie FROM personnage WHERE id = '. $_COOKIE["id"]);
     while($prenom = $r->fetch(PDO::FETCH_ASSOC))  {
       $vieEnnemi = $prenom['vie'];
       $vieEnnemiUpdate = $vieEnnemi;
